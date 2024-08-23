@@ -13,10 +13,19 @@ export default {
       screens: {
         sm: "600px",
         md: "728px",
-        lg: "984px",
       },
     },
-    extend: {},
+    colors: {
+      primary: "#222831",
+      secondary: "#31363F",
+      accent: "#76ABAE",
+      text: "#EEEEEE",
+    },
+    extend: {
+      fontFamily: {
+        sans: ["Jetbrains Mono", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
