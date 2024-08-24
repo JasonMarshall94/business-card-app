@@ -6,7 +6,7 @@ const App = () => {
   const [displayForm, setDisplayForm] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center bg-secondary h-screen p-5">
+    <div className="flex flex-col justify-center bg-secondary h-full p-5">
       {!displayForm && <BusinessCard setDisplayForm={setDisplayForm} />}
       {displayForm && <ContactForm setDisplayForm={setDisplayForm} />}
     </div>
