@@ -1,5 +1,5 @@
-import BusinessCard from "./components/BusinessCard";
-import ContactForm from "./components/ContactForm";
+import BusinessCard from "./components/BusinessCard.tsx";
+import ContactForm from "./components/ContactForm.tsx";
 import { useState } from "react";
 
 const App = () => {

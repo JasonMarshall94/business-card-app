@@ -26,7 +26,9 @@ const ContactForm = ({ setDisplayForm }: SetPropsType) => {
       >
         <FaReply className="text-text hover:text-accent" />
       </button>
+
       <h1 className="text-3xl text-text">Contact Me</h1>
+
       <form
         name="contact"
         method="post"
