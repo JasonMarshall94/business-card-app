@@ -34,6 +34,7 @@ const ContactForm = ({ setDisplayForm }: SetPropsType) => {
         method="post"
         data-netlify="true"
         onSubmit={handleSubmit}
+        data-netlify-honeypot="bot-field"
       >
         <div className="flex flex-col justify-center items-center gap-4">
           <input type="hidden" name="form-name" value="contact" />
