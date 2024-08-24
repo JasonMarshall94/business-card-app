@@ -1,13 +1,13 @@
-import Button from "./Button";
+import { Button } from "./Button";
 import headshot from "../assets/images/headshot.png";
 import { FaGithub } from "react-icons/fa";
-import Card from "./Card";
+import { Card } from "./Card";
 
 type SetPropsType = {
   setDisplayForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const BusinessCard = ({ setDisplayForm }: SetPropsType) => {
+export const BusinessCard = ({ setDisplayForm }: SetPropsType) => {
   return (
     <Card>
       <img
@@ -36,5 +36,3 @@ const BusinessCard = ({ setDisplayForm }: SetPropsType) => {
     </Card>
   );
 };
-
-export default BusinessCard;

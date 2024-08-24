@@ -1,4 +1,4 @@
-import Card from "./Card";
+import { Card } from "./Card";
 import { FaReply } from "react-icons/fa6";
 
 type SetPropsType = {
@@ -13,7 +13,7 @@ interface YourFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-const ContactForm = ({ setDisplayForm }: SetPropsType) => {
+export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
   function handleSubmit(e: React.FormEvent<YourFormElement>) {
     e.preventDefault();
   }
@@ -71,5 +71,3 @@ const ContactForm = ({ setDisplayForm }: SetPropsType) => {
     </Card>
   );
 };
-
-export default ContactForm;

@@ -2,7 +2,7 @@ type SetPropsType = {
   setDisplayForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function Button({ setDisplayForm }: SetPropsType) {
+export const Button = ({ setDisplayForm }: SetPropsType) => {
   return (
     <button
       onClick={() => setDisplayForm(true)}
@@ -11,6 +11,4 @@ function Button({ setDisplayForm }: SetPropsType) {
       Contact Me
     </button>
   );
-}
-
-export default Button;
+};
