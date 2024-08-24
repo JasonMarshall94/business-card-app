@@ -2,7 +2,7 @@ import { BusinessCard } from "./components/BusinessCard";
 import { ContactForm } from "./components/ContactForm";
 import { useState } from "react";
 
-const App = () => {
+export const App = () => {
   const [displayForm, setDisplayForm] = useState(false);
 
   return (
@@ -12,5 +12,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
