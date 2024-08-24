@@ -5,7 +5,19 @@ type SetPropsType = {
   setDisplayForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+interface FormElements extends HTMLFormControlsCollection {
+  yourInputName: HTMLInputElement;
+}
+
+interface YourFormElement extends HTMLFormElement {
+  readonly elements: FormElements;
+}
+
 const ContactForm = ({ setDisplayForm }: SetPropsType) => {
+  function handleSubmit(e: React.FormEvent<YourFormElement>) {
+    e.preventDefault();
+  }
+
   return (
     <Card direction="md:flex-col">
       <button
@@ -15,8 +27,14 @@ const ContactForm = ({ setDisplayForm }: SetPropsType) => {
         <FaReply className="text-text hover:text-accent" />
       </button>
       <h1 className="text-3xl text-text">Contact Me</h1>
-      <form name="contact" method="post" data-netlify="true">
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+      >
         <div className="flex flex-col justify-center items-center gap-4">
+          <input type="hidden" name="form-name" value="contact" />
           <input
             type="text"
             name="name"
