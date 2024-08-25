@@ -15,9 +15,9 @@ export const ContactForm = ({
     setDisplayThankYou(thankYou);
   };
 
-  const handleSubmit = () => {
-    setDisplays(false, true);
-  };
+  // const handleSubmit = () => {
+  //   setDisplays(false, true);
+  // };
 
   return (
     <Card direction="md:flex-col">
@@ -34,7 +34,6 @@ export const ContactForm = ({
         name="contact"
         method="post"
         data-netlify="true"
-        onSubmit={handleSubmit}
         data-netlify-honeypot="bot-field"
       >
         <div className="flex flex-col justify-center items-center gap-4">
