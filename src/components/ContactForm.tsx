@@ -39,6 +39,44 @@ export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
             required
             className="bg-primary p-2 w-full text-text rounded-md border-text border-2 focus:border-accent focus:outline-none"
           />
+          <div className="flex flex-row gap-5 items-start w-full">
+            <div className="flex gap-2 items-start">
+              <div className="grid place-items-center mt-1">
+                <input
+                  type="radio"
+                  name="contactType"
+                  value="FreelanceWork"
+                  id="freelance"
+                  className="peer cursor-pointer col-start-1 row-start-1 appearance-none shrink-0 w-4 h-4 border-2 border-text rounded-full"
+                />
+                <div className="pointer-events-none col-start-1 row-start-1 w-2 h-2 rounded-full peer-checked:bg-accent"></div>
+              </div>
+              <label
+                htmlFor="freelance"
+                className="text-start text-text cursor-pointer"
+              >
+                Freelance Work
+              </label>
+            </div>
+            <div className="flex gap-2 items-start">
+              <div className="grid place-items-center mt-1">
+                <input
+                  type="radio"
+                  name="contactType"
+                  value="GeneralInquiry"
+                  id="general"
+                  className="peer cursor-pointer col-start-1 row-start-1 appearance-none shrink-0 w-4 h-4 border-2 border-text rounded-full"
+                />
+                <div className="pointer-events-none col-start-1 row-start-1 w-2 h-2 rounded-full peer-checked:bg-accent"></div>
+              </div>
+              <label
+                htmlFor="general"
+                className="text-start text-text cursor-pointer"
+              >
+                General Inquiry
+              </label>
+            </div>
+          </div>
           <textarea
             name="message"
             id="Message"
