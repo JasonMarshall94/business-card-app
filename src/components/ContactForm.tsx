@@ -5,19 +5,7 @@ type SetPropsType = {
   setDisplayForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-interface FormElements extends HTMLFormControlsCollection {
-  yourInputName: HTMLInputElement;
-}
-
-interface YourFormElement extends HTMLFormElement {
-  readonly elements: FormElements;
-}
-
 export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
-  function handleSubmit(e: React.FormEvent<YourFormElement>) {
-    e.preventDefault();
-  }
-
   return (
     <Card direction="md:flex-col">
       <button
@@ -33,7 +21,6 @@ export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
         name="contact"
         method="post"
         data-netlify="true"
-        onSubmit={handleSubmit}
         data-netlify-honeypot="bot-field"
       >
         <div className="flex flex-col justify-center items-center gap-4">
