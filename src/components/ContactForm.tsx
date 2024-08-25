@@ -39,7 +39,7 @@ export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
             required
             className="bg-primary p-2 w-full text-text rounded-md border-text border-2 focus:border-accent focus:outline-none"
           />
-          <div className="flex flex-row gap-5 items-start w-full">
+          <div className="flex flex-col gap-2 md:flex-row md:gap-5 items-start w-full">
             <div className="flex gap-2 items-start">
               <div className="grid place-items-center mt-1">
                 <input
