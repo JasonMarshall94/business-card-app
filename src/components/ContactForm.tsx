@@ -3,13 +3,26 @@ import { FaReply } from "react-icons/fa6";
 
 type SetPropsType = {
   setDisplayForm: React.Dispatch<React.SetStateAction<boolean>>;
+  setDisplayThankYou: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
+export const ContactForm = ({
+  setDisplayForm,
+  setDisplayThankYou,
+}: SetPropsType) => {
+  const setDisplays = (form: boolean, thankYou: boolean) => {
+    setDisplayForm(form);
+    setDisplayThankYou(thankYou);
+  };
+
+  const handleSubmit = () => {
+    setDisplays(false, true);
+  };
+
   return (
     <Card direction="md:flex-col">
       <button
-        onClick={() => setDisplayForm(false)}
+        onClick={() => setDisplays(false, false)}
         className="absolute left-4 top-4"
       >
         <FaReply className="text-text hover:text-accent" />
@@ -21,6 +34,7 @@ export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
         name="contact"
         method="post"
         data-netlify="true"
+        onSubmit={handleSubmit}
         data-netlify-honeypot="bot-field"
       >
         <div className="flex flex-col justify-center items-center gap-4">

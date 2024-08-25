@@ -5,9 +5,13 @@ import { Card } from "./Card";
 
 type SetPropsType = {
   setDisplayForm: React.Dispatch<React.SetStateAction<boolean>>;
+  setDisplayThankYou: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const BusinessCard = ({ setDisplayForm }: SetPropsType) => {
+export const BusinessCard = ({
+  setDisplayForm,
+  setDisplayThankYou,
+}: SetPropsType) => {
   return (
     <Card>
       <img
@@ -27,7 +31,13 @@ export const BusinessCard = ({ setDisplayForm }: SetPropsType) => {
           </p>
         </div>
         <div className="flex flex-row justify-start items-center gap-5">
-          <Button setDisplayForm={setDisplayForm} />
+          <Button
+            setDisplayForm={setDisplayForm}
+            setDisplayThankYou={setDisplayThankYou}
+            innerText={"Contact Me"}
+            displayForm={true}
+            displayThankYou={false}
+          />
           <a href="https://github.com/JasonMarshall94" target="_blank">
             <FaGithub className="text-2xl text-text transition-colors hover:text-accent" />
           </a>
