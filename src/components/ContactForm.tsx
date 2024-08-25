@@ -45,7 +45,7 @@ export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
                 <input
                   type="radio"
                   name="contactType"
-                  value="FreelanceWork"
+                  value="Freelance Work"
                   id="freelance"
                   className="peer cursor-pointer col-start-1 row-start-1 appearance-none shrink-0 w-4 h-4 border-2 border-text rounded-full"
                 />
@@ -63,7 +63,7 @@ export const ContactForm = ({ setDisplayForm }: SetPropsType) => {
                 <input
                   type="radio"
                   name="contactType"
-                  value="GeneralInquiry"
+                  value="General Inquiry"
                   id="general"
                   className="peer cursor-pointer col-start-1 row-start-1 appearance-none shrink-0 w-4 h-4 border-2 border-text rounded-full"
                 />
