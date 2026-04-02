@@ -6,10 +6,7 @@ type SetPropsType = {
   setDisplayThankYou: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const ContactForm = ({
-  setDisplayForm,
-  setDisplayThankYou,
-}: SetPropsType) => {
+export const ContactForm = ({ setDisplayForm, setDisplayThankYou }: SetPropsType) => {
   const setDisplays = (form: boolean, thankYou: boolean) => {
     setDisplayForm(form);
     setDisplayThankYou(thankYou);
@@ -21,21 +18,13 @@ export const ContactForm = ({
 
   return (
     <Card direction="md:flex-col">
-      <button
-        onClick={() => setDisplays(false, false)}
-        className="absolute left-4 top-4"
-      >
+      <button onClick={() => setDisplays(false, false)} className="absolute left-4 top-4">
         <FaReply className="text-text hover:text-accent" />
       </button>
 
       <h1 className="text-3xl text-text">Contact Me</h1>
 
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <div className="flex flex-col justify-center items-center gap-4">
           <input type="hidden" name="form-name" value="contact" />
           <input
@@ -64,10 +53,7 @@ export const ContactForm = ({
                 />
                 <div className="pointer-events-none col-start-1 row-start-1 w-2 h-2 rounded-full peer-checked:bg-accent"></div>
               </div>
-              <label
-                htmlFor="freelance"
-                className="text-start text-text cursor-pointer"
-              >
+              <label htmlFor="freelance" className="text-start text-text cursor-pointer">
                 Freelance Work
               </label>
             </div>
@@ -82,10 +68,7 @@ export const ContactForm = ({
                 />
                 <div className="pointer-events-none col-start-1 row-start-1 w-2 h-2 rounded-full peer-checked:bg-accent"></div>
               </div>
-              <label
-                htmlFor="general"
-                className="text-start text-text cursor-pointer"
-              >
+              <label htmlFor="general" className="text-start text-text cursor-pointer">
                 General Inquiry
               </label>
             </div>
@@ -98,10 +81,7 @@ export const ContactForm = ({
             cols={40}
             className="bg-primary p-2 w-full text-text rounded-md border-text border-2 focus:border-accent focus:outline-none"
           ></textarea>
-          <button
-            type="submit"
-            className="text-text w-fit px-5 py-2 rounded-md border-accent border-2 transition-colors hover:border-text"
-          >
+          <button type="submit" className="text-text w-fit px-5 py-2 rounded-md border-accent border-2 transition-colors hover:border-text">
             Submit
           </button>
         </div>

@@ -1,5 +1,5 @@
 type CardProps = {
-  children: JSX.Element | JSX.Element[];
+  children: React.JSX.Element | React.ReactNode;
   direction?: string;
 };
 
