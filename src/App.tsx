@@ -9,24 +9,9 @@ export const App = () => {
 
   return (
     <div className="flex flex-col justify-center bg-secondary h-svh p-5">
-      {!displayForm && !displayThankYou && (
-        <BusinessCard
-          setDisplayForm={setDisplayForm}
-          setDisplayThankYou={setDisplayThankYou}
-        />
-      )}
-      {displayForm && !displayThankYou && (
-        <ContactForm
-          setDisplayForm={setDisplayForm}
-          setDisplayThankYou={setDisplayThankYou}
-        />
-      )}
-      {!displayForm && displayThankYou && (
-        <ThankYou
-          setDisplayForm={setDisplayForm}
-          setDisplayThankYou={setDisplayThankYou}
-        />
-      )}
+      {!displayForm && !displayThankYou && <BusinessCard setDisplayForm={setDisplayForm} setDisplayThankYou={setDisplayThankYou} />}
+      {displayForm && !displayThankYou && <ContactForm setDisplayForm={setDisplayForm} setDisplayThankYou={setDisplayThankYou} />}
+      {!displayForm && displayThankYou && <ThankYou setDisplayForm={setDisplayForm} setDisplayThankYou={setDisplayThankYou} />}
     </div>
   );
 };

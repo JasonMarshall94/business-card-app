@@ -6,13 +6,7 @@ type SetPropsType = {
   displayThankYou: boolean;
 };
 
-export const Button = ({
-  setDisplayForm,
-  setDisplayThankYou,
-  innerText,
-  displayForm,
-  displayThankYou,
-}: SetPropsType) => {
+export const Button = ({ setDisplayForm, setDisplayThankYou, innerText, displayForm, displayThankYou }: SetPropsType) => {
   const setDisplays = (form: boolean, thankYou: boolean) => {
     setDisplayForm(form);
     setDisplayThankYou(thankYou);
